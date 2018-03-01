@@ -4,10 +4,60 @@
 } 
 ul{
     list-style:none;
-}
+} 
 body{
     font-family: 'Allerta', sans-serif;
 }
+.opened{
+    overflow:hidden;
+    
+    
+     
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?gmcddu');
+    src:  url('../fonts/icomoon.eot?gmcddu#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?gmcddu') format('truetype'),
+      url('../fonts/icomoon.woff?gmcddu') format('woff'),
+      url('../fonts/icomoon.svg?gmcddu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
+  .icon-phone:before {
+    content: "\e942";
+  }
+  .icon-envelope:before {
+    content: "\e945";
+  }
+  .icon-menu:before {
+    content: "\e9bd";
+  }
+  .icon-cancel:before {
+    content: "\ea0d";
+  }
+  .icon-close:before {
+    content: "\e900";
+  }
+
+
 table{
     width:100%;
     border-collapse: collapse;
@@ -32,6 +82,7 @@ input:focus, textarea:focus{
 }
 .header{
     padding: 20px 0;
+    
 }
 .container{
     width:100%;
@@ -39,7 +90,7 @@ input:focus, textarea:focus{
     margin:0 auto;
 }
 .background{
-    background-image: url("../images/background.png");
+    background: url("../images/background.png") #466173;
     background-size: cover;
 }
 .titulo{
@@ -56,7 +107,7 @@ input:focus, textarea:focus{
     display:inline-block;
     position:relative;
     top:-20px;
-    right:-217px;
+    right:-190px;
 }
 .menu li{
     margin-left:30px;
@@ -108,7 +159,8 @@ a{
 .right{
     float:right;
     position:relative;
-    top:-137px;
+    top:-122px;
+    
 }
 .left{
     float: left;
@@ -118,11 +170,11 @@ a{
     border-radius:5px;
     border:1px solid gray;
     margin: 10px 10px 45px 10px;
-    padding:10px;
+    padding:10px 10px 25px;
 }
 
 .guitarra.b{
-    height: 200px;
+    height: 190px;
 }
 .title-b{
     font-size:50px;
@@ -138,7 +190,7 @@ a{
 .container-guitarra-b{
     margin-left:370px;
     position:relative;
-    top:-105px;
+    top:-15px;
 }
 footer{
     background:#213C46;
@@ -150,6 +202,7 @@ footer .container{
 }
 .contacto{
     width:275px;
+    margin-left:25px;
 } 
 .info-contacto{
     display: flex;
@@ -175,6 +228,7 @@ footer .container{
     width:400px;
     color:white;
     padding-top:20px;
+    margin-right:25px;
 }
 .datos-personales{
     display: flex;
@@ -189,10 +243,7 @@ footer .container{
 .datos-personales label, .datos-grales label{
     margin-bottom: 10px;
 }
-.intereses{
-    /*flex-direction: column;
-    align-items:; */
-}
+
 .intereses label{
     font-size:13px;
     margin-right:5px;
@@ -206,9 +257,7 @@ footer .container{
 .sexo input{
     margin-right:7px;
 }
-.sexo label{
-    /* margin-left:10px; */
-}
+
 .datos-grales .button{
     margin-top:10px;
     padding:7px 15px;
@@ -221,4 +270,240 @@ ul li::before{
 }
 .tabla{
     margin:45px 0;
+}
+.burguer-button{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    /* position:absolute; */
+    position:fixed;
+    left:20px;
+    top:20px;
+    background: #395667;
+    z-index:1;
+    display:none;
+    color:white;
+}
+/*Video Responsive con HTML5*/
+video{
+    width:100%;
+}
+/*Video Responsive con enlace externo*/
+.video-responsive-container{
+    position: relative;
+    padding-top: 56.25%;/*Esto es lo que le da el alto al video*/
+    /*ver proporciones de video 16-9*/
+}
+.video-responsive-iframe{
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    z-index:-1
+
+}
+.video-demo{
+    max-width:500px;
+    margin:0 auto 80px;
+    border: 5px solid #3c5b63;
+}
+@media screen and (max-width: 800px){
+    
+    .titulo{
+        font-size: 45px;
+        padding-top:20px;
+    }
+    .title-a{
+        font-size:18px;
+    }
+    .menu{
+        right:-155px;
+    }
+    .portada .button{
+        margin-bottom:30px;
+        font-size: 16px;
+    }
+    .guitarras{
+        text-align: center;
+    }
+    .right, .left{
+        position:static;
+        float:none;
+    }
+    .guitarra ol{
+        list-style:none;
+    }
+    .container-guitarra-a .title-b{
+        padding-top:10px;
+    }
+    .guitarra.b{
+        height: auto;
+    }
+    .container-guitarra-b{
+        position:static;
+        margin-left:0;
+    }
+    footer .container{
+        justify-content: space-around;
+    }
+    .video-demo{
+        margin: 0 auto 20px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    
+    .formulario{
+        flex-direction:column;
+        align-items: center;
+    }
+    footer .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .datos-personales{
+        width:300px;
+        margin-right:0;
+    }
+    .datos-grales{
+        width:300px;
+        margin-top:10px;
+    }
+    .datos-grales textarea{
+        width:300px;
+    }
+    .intereses{
+        display:flex;
+        flex-direction:column;
+    }
+    .intereses label{
+        font-size: 16px;
+    }
+    .formulario input[type="text"], 
+    .formulario input[type="email"]{
+        padding:5px;
+        font-size:16px;
+    }
+    .formulario input[type="text"]{
+        margin-bottom:10px;
+    }
+    
+}
+
+@media screen and (max-width: 667px){
+    
+    .menu{
+        display:block;
+        position: static;
+        margin-top: 30px;
+    }
+    .header{
+        text-align: center;
+    }
+    .menu li:first-child{
+        margin-left:0;
+    }
+    .logotipo img{
+        width:250px;
+        height: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    /* Menu */
+    /*Para ocultar el menú mediante el position, el elemneto tiene que tener un ancho declarado,
+    width:100% left:-100% para que se oculte totalmente hacia la izquierda*/
+    .menu{
+        background: rgba(229, 31, 62, 0.8);
+        position:fixed;
+        width:100%;
+        top:0;
+        left:-100%;
+        right:0;
+        bottom:0;
+        margin:0;
+        display:flex;
+        align-items: center;
+        transition:.3s;
+
+    }
+    .portada .button{
+        display:block;
+    }
+    .burguer-button{
+        display:block;
+    }
+    .menu.active{
+        left:0;
+    }
+    .menu ul{
+        width:100%;
+    }
+    .logotipo{
+        margin-top:20px;
+    }
+    
+    .titulo{
+        padding-bottom:10px;
+        font-size:30px;
+    }
+    .title-a{
+        font-size:16px;
+    }
+    .menu li{
+        display:block;
+        margin-left:0;
+        border-bottom: 1px solid white;
+    }
+    .menu li:first-child{
+        border-top:1px solid white;
+    }
+    .menu li::before{
+        content:"";
+    }
+    .menu li a{
+        line-height: 45px;
+        display:block;
+    }
+    .portada{
+        text-align: center;
+    }
+    .guitarra img{
+        width:200px;
+    }
+    .title-b{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+    .video-demo{
+        margin:0 10px;
+    }
+    .datos-grales .button{
+        width:100%;
+    }
+    .datos-personales,
+    .datos-grales, 
+    .datos-grales textarea,
+    .formulario{
+        width:250px;
+    }
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+.background{
+        background-image: url('../images/background2x.png');
+    }
+    /* .burguer-button{
+        display:block;
+    } */
+
 }
